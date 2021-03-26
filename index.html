@@ -1,25 +1,16 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Realtime communication with WebRTC</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <h1>Realtime communication with WebRTC</h1>
-
-    <video id="localVideo" autoplay playsinline></video>
-    <video id="remoteVideo" autoplay playsinline></video>
-
-    <div>
-        <button id="startButton">Start</button>
-        <button id="callButton">Call</button>
-        <button id="hangupButton">Hang Up</button>
-    </div>
-
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="js/main.js"></script>
+<body onload="showMyFace()">
+    <h1> 기복이와 함께하는 즐거운 화상채팅/h1>
+        <video id="yourVideo" autoplay muted playsinline></video>
+        <video id="friendsVideo" autoplay playsinline></video>
+        <br />
+        <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 </body>
 
 </html>

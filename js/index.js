@@ -10,7 +10,6 @@ var config = {
     measurementId: "사용자 정보"
 };
 
-
 firebase.initializeApp(config);
 
 var database = firebase.database().ref();

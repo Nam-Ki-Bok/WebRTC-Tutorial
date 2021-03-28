@@ -1,8 +1,49 @@
-## WebRTC - Tutorial
+## 📡 WebRTC - Tutorial
 
-WebRTC 예제코드입니다.
+webRTC 활용 1:1 화상회의 구현 튜토리얼 입니다.
 
+Firebase, Viagenie 계정만 있으면 구현 가능합니다.
 
+## 🔨 Server
+
+**Signaling Serve**r : Firebase
+
+**STUN** : stun.l.google.com:19302
+
+**TURN** : numb.viagenie.ca
+
+## 💻 Setting
+
+Firebase, Viagenie 계정을 생성 한 뒤 **js/index.js** 를 본인 계정에 맞게 수정합니다.
+
+```javascript
+var config = {
+    apiKey: "사용자 정보",
+    authDomain: "사용자 정보",
+    databaseURL: "사용자 정보",
+    projectId: "사용자 정보",
+    storageBucket: "사용자 정보",
+    messagingSenderId: "사용자 정보",
+    appId: "사용자 정보",
+    measurementId: "사용자 정보"
+};
+```
+
+---
+
+```javascript
+var servers = {
+    'iceServers': [{
+        'urls': 'stun:stun.services.mozilla.com'
+    }, {
+        'urls': 'stun:stun.l.google.com:19302'
+    }, {
+        'urls': 'turn:numb.viagenie.ca',
+        'credential': '사용자 비밀번호',
+        'username': '사용자 아이디'
+    }]
+};
+```
 
 ## License
 
